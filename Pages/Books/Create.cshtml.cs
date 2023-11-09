@@ -27,11 +27,11 @@ namespace Moldovan_Andrada_Lab2.Pages.Books
                 FullName = x.AuthorName
             });
             
-             ViewData["AuthorID"] = new SelectList(authorList, "ID", "FullName");
+             // ViewData["AuthorID"] = new SelectList(authorList, "ID", "FullName");
              ViewData["PublisherID"] = new SelectList(_context.Set<Publisher>(), "ID",
             "PublisherName");
             ViewData["AuthorID"] = new SelectList(_context.Set<Author>(), "ID",
-        "AuthorrName");
+            "AuthorName");
 
             var book = new Book();
             book.BookCategories = new List<BookCategory>();
